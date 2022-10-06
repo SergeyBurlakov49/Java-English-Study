@@ -1,7 +1,6 @@
-package LambdaExpressions.ObjectMethodReference;
-import LambdaExpressions.ObjectMethodReference.MyNumber.*;
+package Lambda_n_References.ObjectMethodReference;
 
-public class Main {
+public class ObjMethRef {
     public static void main(String[] args) {
         MyNumber myNumber = new MyNumber(10); // создание объекта класса MyNumber со значением приватной переменной 10
 
@@ -14,4 +13,21 @@ public class Main {
                                                        которая представляет собой использование метода isEven для
                                                        приватной переменной объекта класса MyNumber*/
     }
+}
+
+class MyNumber {
+    private int x;              // переменная класса, которая будет проверяться
+
+    MyNumber (int x){
+        this.x = x;             // значение присваивается через конструктор
+    }
+
+    public boolean isEven(){    // метод проверяет четность числа
+        return (x % 2 == 0);
+    }
+}
+
+@FunctionalInterface
+interface Check {
+    boolean check(); // Проверяет число на соблюдение какого-либо условия
 }
