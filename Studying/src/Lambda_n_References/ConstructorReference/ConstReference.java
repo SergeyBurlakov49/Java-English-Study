@@ -9,7 +9,7 @@ public class ConstReference {
 
 class A{
     A(){
-        System.out.println("Constructor is working");
+        System.out.println("HW");
     }
 }
 
