@@ -1,4 +1,4 @@
-package Lambda_n_References.ConstructorReference;
+package Lambda_n_References;
 
 public class ConstReference {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Lambda_n_References.GenericReference;
+package Lambda_n_References;
 
 public class GenReference {
     public static void main(String[] args) {
