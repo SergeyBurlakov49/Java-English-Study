@@ -1,4 +1,4 @@
-package Lambda_n_References.PredefinedInterfaces;
+package Lambda_n_References.ObjectMethodReference.PredefinedInterfaces;
 
 import java.util.function.BinaryOperator;
 
