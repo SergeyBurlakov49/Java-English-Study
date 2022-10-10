@@ -1,4 +1,4 @@
 module B {
-    requires C;
+    requires transitive C;
     exports bPack to A;
 }
