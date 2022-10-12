@@ -1,7 +1,5 @@
-package cPack;
-
 public class Main {
-    public static void printC() {
+    public static void main(String[] args) {
         System.out.println("Hello world!");
     }
 }
