@@ -23,14 +23,24 @@
 # Registers:
 
 # File marks:
-'0  1  0  ~/.git/COMMIT_EDITMSG
-|4,48,1,0,1666428191,"~/.git/COMMIT_EDITMSG"
+'0  1  0  ~/.git/MERGE_MSG
+|4,48,1,0,1666686571,"~/.git/MERGE_MSG"
+'1  1  0  ~/.git/COMMIT_EDITMSG
+|4,49,1,0,1666428191,"~/.git/COMMIT_EDITMSG"
 
 # Jumplist (newest first):
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1666686571,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/COMMIT_EDITMSG
+|4,39,1,0,1666428191,"~/.git/COMMIT_EDITMSG"
 -'  1  0  ~/.git/COMMIT_EDITMSG
 |4,39,1,0,1666428191,"~/.git/COMMIT_EDITMSG"
 
 # History of marks within files (newest to oldest):
+
+> ~/.git/MERGE_MSG
+	*	1666686561	0
+	"	1	0
 
 > ~/.git/COMMIT_EDITMSG
 	*	1666428187	0
