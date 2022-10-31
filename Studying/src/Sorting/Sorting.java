@@ -42,6 +42,33 @@ public class Sorting {
         return arr;
     }
 
+    public static int [] quick_sorting(int [] input_array){
+        switch (input_array.length){
+            case 1: return input_array;
+            case 2: {
+                if (input_array[0] > input_array[1]){
+                    int buffer = input_array[1];
+                    input_array[1] = input_array[0];
+                    input_array[0] = buffer;
+                }
+                return input_array;
+            }
+        }
+        int sum = 0;
+        for (int i: input_array){
+            sum += i;
+        }
+        int avrg = sum / input_array.length;
+        int difference = Math.abs(avrg - input_array[0]);
+        int backbone = 0;
+        for (int i = 1; i < input_array.length; i++){
+            if (Math.abs(avrg - input_array[i]) < difference){
+                backbone = i;
+            }
+        }
+        return input_array;
+    }
+
     /*public static int [] quick_sorting(int ... arr){
         if (arr.length == 2){
             if (arr[0] > arr[1]){
@@ -93,7 +120,7 @@ public class Sorting {
         return arr;
     }*/
 
-    public static int [] quick_sorting(int [] input_array){
+    /*public static int [] quick_sorting(int [] input_array){
         if (input_array.length == 2){
             if (input_array[0] > input_array[1]){
                 int buffer = input_array[0];
@@ -147,5 +174,5 @@ public class Sorting {
         }
         quick_sort(input_array, start_index, min_counter - 1);
         quick_sort(input_array, min_counter, over_index);
-    }
+    }*/
 }
