@@ -9,7 +9,7 @@ abstract public class Animal {
         this.height = height;
     }
 
-    public Animal(Animal ob){
+    protected Animal(Animal ob){
         weight = ob.weight;
         height = ob.height;
     }
@@ -59,7 +59,7 @@ final class Cat extends Animal implements Cloneable{
         this.breed = breed;
     }
 
-    public Cat(Cat ob){
+    protected Cat(Cat ob){
         super(ob);
         breed = ob.breed;
     }
@@ -81,14 +81,22 @@ final class Cat extends Animal implements Cloneable{
         System.out.println("weight = " + getWeight());
         System.out.println("height = " + getHeight());
     }
+    public Cat clone(){
+        return new Cat(this);
+    }
 }
 class Demo {
     public static void main(String[] args) {
-        Animal a;                                       // т.е ссылка суперкласса с объектом подкласса может использо -
-        a = new Cat(10,10,"amogus"); // вать только члены суперкласса, но в случае с переопределением
-        a.showHeight();                                 // метода будет использовать метод подкласса. Че ваще...
-        a.show();
-        a.say();
+//        Animal a;                                        т.е ссылка суперкласса с объектом подкласса может использо -
+//      a = new Cat(10,10,"amogus");                       вать только члены суперкласса, но в случае с переопределением
+//      a.showHeight();                                 // метода будет использовать метод подкласса. Че ваще...
+//      a.show();
+//      a.say();
+        Cat c = new Cat(8, 8, "sus");
+        Cat c2 = c.clone();
+        c.setBreed("bebra");
+        c.show();
+        c2.show();
         //a = new Animal(10,10);
         //a.show();
 
