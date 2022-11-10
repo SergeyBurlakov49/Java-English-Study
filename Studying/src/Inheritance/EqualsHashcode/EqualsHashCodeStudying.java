@@ -4,6 +4,10 @@ import java.util.Objects;
 
 public class EqualsHashCodeStudying {
     int a, b;
+    @Override
+    public String toString(){
+       return "Объект класса EqualsHashCodeStudying";
+    }
 
     EqualsHashCodeStudying(int a, int b){
         this.a = a;
@@ -23,6 +27,7 @@ public class EqualsHashCodeStudying {
         else System.out.println("echs1 != echs3");
         if (ehcs2.equals(ehcs3)) System.out.println("echs2 == echs3");
         else System.out.println("echs2 != echs3");
+        System.out.println(ehcs1);
     }
 
     @Override
