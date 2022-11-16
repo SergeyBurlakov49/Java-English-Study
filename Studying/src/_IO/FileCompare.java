@@ -19,7 +19,7 @@ public class FileCompare {
             DataInputStream disB = new DataInputStream(fisB)){
             int iA = 0;
             int iB = 0;
-            
+
         }
     }
 }
