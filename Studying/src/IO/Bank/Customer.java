@@ -2,10 +2,10 @@ package IO.Bank;
 
 public class Customer {
 
-    double balance;
+    float balance;
     String name;
 
-    public Customer(double balance, String name) {
+    public Customer(float balance, String name) {
         this.balance = balance;
         this.name = name;
     }

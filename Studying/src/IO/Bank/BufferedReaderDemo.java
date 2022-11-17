@@ -3,19 +3,21 @@ import java.io.*;
 
 public class BufferedReaderDemo {
     public static void main(String[] args) throws IOException{
-        File file = new File("C:/Users/megas/OneDrive/Рабочий стол/Projects/Java-English-Study/Bankinfo.txt");
+        File file = new File("C:/Users/megas/OneDrive/Рабочий стол/Projects/Bankinfo.txt");
         try(FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr)){
-            String userdata = "?";
-            while (userdata != null){
+            String userdata;
+            for (;;){
                 userdata = br.readLine();
+                if (userdata == null) break;
                 int divider = userdata.indexOf(',');
-                String userName = userdata.substring(0, divider - 1);
+                String userName = userdata.substring(0, divider);
                 String balanceString = userdata.substring(divider + 1);
-                double userBalance = Double.parseDouble(balanceString);
+                float userBalance = Float.parseFloat(balanceString);
                 Customer customer = new Customer(userBalance, userName);
-                System.out.println(customer.toString());
+                System.out.println(customer);
+                System.out.println(customer.balance + 1);
             }
         }
     }
