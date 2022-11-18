@@ -2,7 +2,11 @@ package MultiThreading.Base2;
 
 public class ForCycleThread implements Runnable{
 
-    private Thread thrd;
+    public Thread thrd;
+
+    ForCycleThread(){
+        thrd = new Thread(this);
+    }
 
     @Override
     public void run() {
@@ -18,7 +22,6 @@ public class ForCycleThread implements Runnable{
 
     static ForCycleThread createAndStart(){
         ForCycleThread fct = new ForCycleThread();
-        fct.thrd = new Thread(fct);
         fct.thrd.start();
         return fct;
     }
