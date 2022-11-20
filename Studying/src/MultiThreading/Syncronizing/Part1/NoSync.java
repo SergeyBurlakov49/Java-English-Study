@@ -1,4 +1,4 @@
-package MultiThreading.Syncronizing;
+package MultiThreading.Syncronizing.Part1;
 
 public class NoSync implements Runnable{
 
