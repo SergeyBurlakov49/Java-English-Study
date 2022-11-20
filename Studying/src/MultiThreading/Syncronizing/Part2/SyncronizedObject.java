@@ -16,6 +16,7 @@ public class SyncronizedObject implements Runnable{
                                                            что в отношении synchronizedObject может действовать только
                                                            один synchronizedObject.thrd. */
         add5ShowAndReturn();
+        System.out.println("Id треда " + Thread.currentThread().getName() + " - " + Thread.currentThread().getId());
     }
 
     public void /*synchronized*/ add5ShowAndReturn(){   /* Вместо слова "synchronized" в сигнатуре метода run() можно
@@ -25,7 +26,12 @@ public class SyncronizedObject implements Runnable{
                                                            add5ShowAndReturn(), то в дело вступает синхронизация и
                                                            треды залетают в этот метод по очереди. */
         x += 5;
-        System.out.println(x);
+        System.out.println("Тред "+ Thread.currentThread().getName() + ": " + x); /* стоит обратить внимание на возможность
+                                                                                     обратиться к треду из него самого. Т.к.
+                                                                                     main метод запускает main тред и
+                                                                                     выполняется внутри него, то из этого
+                                                                                     следует, то что к текущему треду можно
+                                                                                     обратиться из любой точки программы.*/
         x -=5;
     }
 }
