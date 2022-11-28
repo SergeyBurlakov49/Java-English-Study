@@ -8,11 +8,11 @@ public class Counter {
         x = 0;
     }
 
-    public synchronized void inc(){
+    public  void inc(){
         x++;
     }
 
-    public synchronized void dec(){
+    public  void dec(){
         x--;
     }
 }

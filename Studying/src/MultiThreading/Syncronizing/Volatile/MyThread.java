@@ -1,20 +1,17 @@
 package MultiThreading.Syncronizing.Volatile;
 
 public class MyThread implements Runnable{
-    /** Хоть пиши volatile перед переменной, хоть не пиши, а цикл все равно останавливается как надо. Но зато я понял,
-     *  что synchronized подразумевает volatile у всех полей объекта монитора.*/
-    public boolean doRun = true;
+    /** Короче, если занять поток каким-нибудь делом, то он не будет подтягивать значение булевой переменной из общей
+     *  кучи, и тут в дело вступает ключевое слово volatile. Прошлый вариант цикла предполагал вывод сообщения в консоль
+     *  и чилл в течение секунды. И этот поток умудрялся подтягивать значения переменных из общего heap. Таким образом,
+     *  ключевое слово volatile не имело смысла. Ну и ну...*/
+    public volatile boolean doRun = true;
 
     @Override
     public void run() {
         while (doRun){
-            System.out.println("Doing some...");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException exc) {
-                exc.printStackTrace();
+            int i = 0;
             }
         }
     }
 
-}
