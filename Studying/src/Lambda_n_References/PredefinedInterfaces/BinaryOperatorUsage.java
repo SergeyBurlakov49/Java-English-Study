@@ -10,7 +10,7 @@ public class BinaryOperatorUsage {
         BinaryOperator<Integer> bo = (Integer a, Integer b) ->  a + b;  /* лямбда выражение, дающее значение Integer -
                                                                        объекту значение суммы двух объектов этого типа*/
         Integer i = bo.apply(20, 30); // присвоение объекту типа Integer суммы 20 и 30
-        System.out.println(i);              // вывод значения в консоль
+        System.out.println(i);             // вывод значения в консоль
     }
 }
 

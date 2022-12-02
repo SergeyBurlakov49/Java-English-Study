@@ -3,7 +3,7 @@ import java.io.*;
 
 public class BufferedReaderDemo {
     public static void main(String[] args) throws IOException{
-        File file = new File("C:/Users/megas/OneDrive/Рабочий стол/Projects/Bankinfo.txt");
+        File file = new File("Bankinfo.txt");
         try(FileInputStream fis = new FileInputStream(file);
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr)){

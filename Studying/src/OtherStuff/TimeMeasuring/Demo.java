@@ -1,5 +1,7 @@
 package OtherStuff.TimeMeasuring;
 
+import java.util.ArrayList;
+
 public class Demo {
     public static void main(String[] args) {
         long before = System.nanoTime();
@@ -10,5 +12,6 @@ public class Demo {
         }
         long after = System.nanoTime();
         System.out.println("Проверка условия 1000 раз заняла " + (after - before) + " наносекунд");
+
     }
 }
