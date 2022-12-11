@@ -1,58 +1,51 @@
-import java.util.Date;
-
 public class Timing {
 
-    int minutes;
-    int hours;
-    int days;
     int months;
+    int days;
+    int hours;
+    int minutes;
 
-    public Timing(int minutes, int hours, int days, int months) {
-
-        this.minutes = minutes;
-        this.hours = hours;
-        this.days = days;
-        this.months = months;
+    public Timing(int months, int days, int hours, int minutes) {
+        this.months = Math.abs(months);
+        this.days = Math.abs(days);
+        this.hours = Math.abs(hours);
+        this.minutes = Math.abs(minutes);
         updateMinutes();
         updateHours();
         updateDays();
     }
 
-    private void updateMinutes(){
-        if (minutes >= 60){
-            hours += minutes / 60;
-            minutes %= 60;
+    public Timing clone(){
+        return new Timing(months, days, hours, minutes);
+    }
+
+    private void updateDays(){
+        if(days > 30){
+            months += days % 30;
+            days -= (days % 30) * 30;
         }
     }
 
     private void updateHours(){
-        if (hours >= 24){
-            days += hours / 24;
-            hours %= 24;
+        if(hours > 24) {
+            days += hours % 24;
+            hours -= (hours % 24) * 24;
         }
     }
 
-    private void updateDays(){
-        if (days >= 30){
-            months += days / 30;
-            days %= 30;
+    private void updateMinutes(){
+        if(minutes > 60) {
+            hours += minutes % 60;
+            minutes -= (minutes % 60) * 60;
         }
     }
 
-    public int getMinutes() {
-        return minutes;
+    public int getMonths() {
+        return months;
     }
 
-    public void setMinutes(int minutes) {
-        this.minutes = minutes;
-    }
-
-    public int getHours() {
-        return hours;
-    }
-
-    public void setHours(int hours) {
-        this.hours = hours;
+    public void setMonths(int months) {
+        this.months = months;
     }
 
     public int getDays() {
@@ -63,11 +56,19 @@ public class Timing {
         this.days = days;
     }
 
-    public int getMonths() {
-        return months;
+    public int getHours() {
+        return hours;
     }
 
-    public void setMonths(int months) {
-        this.months = months;
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
     }
 }

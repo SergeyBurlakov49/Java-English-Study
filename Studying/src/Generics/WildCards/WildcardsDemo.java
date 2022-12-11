@@ -4,7 +4,7 @@ import java.util.*;
 
 public class WildcardsDemo {
     public static void main(String[] args) {
-        List<Computer> list = new ArrayList<>();    // пока не изучал collections, это вроде че то типа массива9
+        List<Computer> list = new ArrayList<>();    // пока не изучал collections, это вроде че то типа массива
         list.add(new Computer());
         list.add(new Notebook());
         turnOffComputers(list);

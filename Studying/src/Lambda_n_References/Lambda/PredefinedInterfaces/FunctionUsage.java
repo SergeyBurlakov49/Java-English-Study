@@ -1,4 +1,4 @@
-package Lambda_n_References.PredefinedInterfaces;
+package Lambda_n_References.Lambda.PredefinedInterfaces;
 
 import java.util.function.Function;
 

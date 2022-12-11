@@ -2,7 +2,7 @@ package Lambda_n_References;
 
 public class GenReference {
     public static void main(String[] args) {
-        Integer i = 9;                                      // создается объект класса Integer
+        Integer i = 9;                                              // создается объект класса Integer
         Check<Integer> checkMyInt = GenReference::<Integer>isEven;  /* создается ссылка функционального интерфейса со
                                                                статическим методом, который принимает в качестве
                                                                аргумента обобщенный тип (любой тип-наследник класса
