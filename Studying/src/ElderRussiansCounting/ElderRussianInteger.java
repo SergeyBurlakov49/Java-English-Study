@@ -116,7 +116,7 @@ public class ElderRussianInteger extends Number{
         StringBuilder sb = new StringBuilder(size);
         if (this.intEqual < 0)sb.append("Минус ");
         for (int i = 0; i < array.length; i++){
-            sb.append(array[i].toString());
+            sb.append(array[i]);
             for (int i1 = array.length - 1; i1 > i; i1--){
                 sb.append(" Десятичков");
             }

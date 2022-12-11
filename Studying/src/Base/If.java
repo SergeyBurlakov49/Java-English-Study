@@ -8,6 +8,6 @@ public class If {
         if (10 >= 10) System.out.println("10 >= 10");
         if (10 == 10) System.out.println("10 == 10");
         if (10 != 9) System.out.println("10 != 9");
-        if (10 != 10) System.out.println("You will not see this string");
+        if (10 != 10) System.out.println("You wont see this string");
     }
 }

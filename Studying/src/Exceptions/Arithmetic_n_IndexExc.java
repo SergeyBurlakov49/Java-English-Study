@@ -22,6 +22,7 @@ public class Arithmetic_n_IndexExc {
         try {
             throw throwable;
         }
+
         catch (Throwable exc){
             System.out.println("exc.getLocalizedMessage()");
             System.out.println(exc.getLocalizedMessage() + "\n");

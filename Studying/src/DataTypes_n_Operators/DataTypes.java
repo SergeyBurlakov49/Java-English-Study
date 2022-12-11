@@ -6,8 +6,8 @@ public class DataTypes {
         boolean boolmin = false;
         byte bmax = 127;
         byte bmin = -128;
-        double dmax = 9_223_372_036_854_775_807.0d;
-        double dmin = -9_223_372_036_854_775_808.0d;
+//        double dmax = 9_223_372_036_854_775_807.0d;  там числа сильно больше
+//        double dmin = -9_223_372_036_854_775_808.0d;
         float fmax = 21_474_836_47.0f;
         float fmin = -21_474_836_48.0f;
         int imax = 21_474_836_47;
